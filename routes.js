@@ -57,11 +57,10 @@ router.post('/users', (req, res) => {
       'userMessage': 'Your password should be between 8 and 20 characters'
     })
   } 
-  console.dir(pwordErrs)
   if(pwordErrs.password.length > 0 ) {
     errors.push(pwordErrs);
   } else {
-    user.password = bcrypt.hashSync( user.password, 20);;
+    user.password = user.password;
   }
 
 
