@@ -1,4 +1,4 @@
-ho{
+{
   "name": "rest-api-validation-with-express",
   "version": "1.0.0",
   "description": "",
@@ -15,7 +15,7 @@ ho{
     "eslint-plugin-import": "^2.22.0"
   },
   "dependencies": {
-    "bcrypt": "^5.0.0",
+    "bcrypt-nodejs": "0.0.3",
     "express": "^4.17.1",
     "morgan": "^1.10.0"
   }
