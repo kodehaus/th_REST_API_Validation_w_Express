@@ -18,6 +18,13 @@ router.get('/users', (req, res) => {
 router.post('/users', (req, res) => {
   // Get the user from the request body.
   const user = req.body;
+  const errors = [];
+  if(!user.name){
+    errors.push('Please provide a value for "name"');
+  }
+  if(!user.email){
+    errors.push('Please provide a value for "email"');
+  }
 
   // Add the user to the `users` array.
   users.push(user);
