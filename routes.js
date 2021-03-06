@@ -24,8 +24,8 @@ router.post('/users', (req, res) => {
     errors.push(
       {
         name: [{
-          message: '"The request body must contain a \"name\" field set to the user\'s name',
-          userMessage: 'Please provide a value for "name"'
+          message: "The request body must contain a name field set to the user\'s name",
+          userMessage: "Please provide a value for name"
         }]
       }
     )
@@ -34,8 +34,8 @@ router.post('/users', (req, res) => {
     errors.push(
       {
         email: [{
-          'message': '"The request body must contain an \"email\" field set to the user\'s email',
-          'userMessage': 'Please provide a value for "email"'
+          'message': "The request body must contain an email field set to the user\'s email",
+          'userMessage': "Please provide a value for email"
         }]
       }
     )
@@ -48,13 +48,13 @@ router.post('/users', (req, res) => {
 
   if (!password) {
     pwordErrs.password.push({
-      'message': '"The request body must contain a valid \"password\" ',
-      'userMessage': 'Please provide a value for "password"'
+      'message': "The request body must contain a valid password",
+      'userMessage': "Please provide a value for password"
     })
   } else if (password.length < 8 || password.length > 20) {
     pwordErrs.password.push({
-      'message': '"The request body must contain a valid \"password\" length between 8 - 20 characters',
-      'userMessage': 'Your password should be between 8 and 20 characters'
+      'message': "The request body must contain a valid password length between 8 - 20 characters",
+      'userMessage': "Your password should be between 8 and 20 characters"
     })
   } 
   if(pwordErrs.password.length > 0 ) {
